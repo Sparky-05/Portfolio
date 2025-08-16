@@ -1,16 +1,6 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+}
 
-const nextConfig: NextConfig = {
-  // ✅ Enable static export for GitHub Pages
-  output: "export",
-
-  // ✅ Ignore build-time TypeScript/ESLint errors
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-};
-
-export default nextConfig;
+module.exports = nextConfig
