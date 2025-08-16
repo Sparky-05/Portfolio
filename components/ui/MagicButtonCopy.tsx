@@ -1,0 +1,34 @@
+import React, { ReactNode } from 'react';
+
+type MagicButtonProps = {
+  Child: ReactNode;
+  Child2?: ReactNode;
+};
+
+const MagicButton = ({ Child, Child2 }: MagicButtonProps) => {
+  const handleClick = () => {
+    const email = "tiwarymayank5816@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      alert("Email copied!");
+    }).catch((err) => {
+      console.error("Failed to copy email: ", err);
+      alert("Failed to copy email.");
+    });
+  };
+
+  return (
+    <div>
+      <button
+        onClick={handleClick}
+        className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px]"
+      >
+        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+        <span className="inline-flex h-full w-52 between320_402:w-[200px] between0_320:w-[150px] b cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl gap-2">
+          {Child} {Child2}
+        </span>
+      </button>
+    </div>
+  );
+};
+
+export default MagicButton;
