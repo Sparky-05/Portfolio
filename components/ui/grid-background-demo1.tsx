@@ -34,7 +34,9 @@ export default function GridBackgroundDemo() {
               <MagicButton
                 Child="I’m ready when you are"
                 Child2={<BsRocket className="text-base" />}
+                href="https://mail.google.com/mail/?view=cm&to=tiwarymayank5816@gmail.com&su=Hello%20Mayank&body=Hi%20there!"
               />
+
             </div>
           </div>
         </BackgroundLines>

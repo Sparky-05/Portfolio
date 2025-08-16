@@ -55,6 +55,7 @@ export function GridBackgroundDemo() {
             <MagicButton
               Child="Show my Work"
               Child2={<HiArrowDownTray className="text-xl ml-2 between0_425:text-sm" />}
+              href="#about"
             />
           </div>
         </div>
